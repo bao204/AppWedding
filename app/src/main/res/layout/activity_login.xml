@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/regisimg"
+    tools:context=".LoginActivity">
+
+    <FrameLayout
+        android:layout_width="368dp"
+        android:layout_height="608dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_border_regis">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20sp"
+                android:src="@drawable/logowd"/>
+            <!--<TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text=""/>-->
+
+
+            <LinearLayout
+                android:id="@+id/viewGroup_edtLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_sdtLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/advent_pro_medium"
+                    android:text="Số điện thoại"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edt_sdtLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_border_regis"
+                        android:drawableStart="@drawable/icon_phone"
+                        android:hint=" (+84) xxx xxx xxx"
+                        android:inputType="phone"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#7E7878"
+                        tools:ignore="Autofill,HardcodedText" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewGroup_edtMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewGroup_edtLogin"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_matKhauLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/advent_pro_medium"
+                    android:text="Mật khẩu"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edt_matKhauLogin"
+                        android:hint="  Mật khẩu"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:textColorHint="#7E7878"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:drawableStart="@drawable/icon_key"
+                        android:background="@drawable/background_border_regis"
+                        tools:ignore="Autofill,HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<TextView
+                android:id="@+id/tvClick_quenMatKhau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="191dp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="Quên mật khẩu?"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />-->
+
+            <Button
+                android:id="@+id/btnClickLogin_login"
+                android:layout_width="131dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="108dp"
+                android:background="@drawable/backgroud_radius_white"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/amiko"
+                android:text="Đăng nhập"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/signIn"
+                android:layout_width="125dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="108dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/tvtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Chưa có tài khoản?"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnClick_regis"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/background_start_app_login"
+                    android:text="Tạo tài khoản"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".LoginActivity"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40sp"
+            android:id="@+id/profileImage"
+            app:shapeAppearanceOverlay="@style/roundedImageView"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10sp"
+            android:id="@+id/nameTV"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10sp"
+            android:id="@+id/mailTV"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:id="@+id/signIn"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signout"
+            android:text="Sign Out"
+            android:layout_marginTop="10sp" />
+
+    </LinearLayout>-->
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".LoginActivity">
+
+        <FrameLayout
+            android:layout_width="368dp"
+            android:layout_height="608dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_login">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="150sp"
+                    android:layout_height="140sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20sp"
+                    android:src="@drawable/profile" />
+                &lt;!&ndash;<TextView
+                    android:id="@+id/tvError"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text=""/>&ndash;&gt;
+
+
+                <LinearLayout
+                    android:id="@+id/viewGroup_edtLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="170dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_sdtLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/advent_pro_medium"
+                        android:text="Số điện thoại"
+                        android:textColor="#716565"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/edt_sdtLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint=" (+84) xxx xxx xxx"
+                        android:inputType="phone"
+                        tools:ignore="Autofill,HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/viewGroup_edtMatKhau"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewGroup_edtLogin"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_matKhauLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/advent_pro_medium"
+                        android:text="Mật khẩu"
+                        android:textColor="#716565"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/edt_matKhauLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Mật khẩu"
+                        android:inputType="textPassword" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvClick_quenMatKhau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="191dp"
+                    android:fontFamily="@font/advent_pro_medium"
+                    android:text="Quên mật khẩu?"
+                    android:textColor="#ED0606"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnClickLogin_login"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginBottom="107dp"
+                    android:background="@drawable/backgroud_radius_yellow"
+                    android:backgroundTint="#FFFFFF"
+                    android:fontFamily="@font/amiko"
+                    android:text="Đăng nhập"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/signIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="106dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/tvtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Chưa có tài khoản?"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/btnClick_regis"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_login"
+                        android:text="Tạo tài khoản"
+                        android:textColor="#C84F4F" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+        &lt;!&ndash;<?xml version="1.0" encoding="utf-8"?>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".LoginActivity"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40sp"
+                android:id="@+id/profileImage"
+                app:shapeAppearanceOverlay="@style/roundedImageView"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10sp"
+                android:id="@+id/nameTV"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10sp"
+                android:id="@+id/mailTV"/>
+
+            <com.google.android.gms.common.SignInButton
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:id="@+id/signIn"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signout"
+                android:text="Sign Out"
+                android:layout_marginTop="10sp" />
+
+        </LinearLayout>&ndash;&gt;
+    -->

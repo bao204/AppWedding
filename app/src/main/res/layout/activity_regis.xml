@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagestart"
+    tools:context=".RegisActivity"
+    android:gravity="center">
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="475dp"
+        android:background="@drawable/background_border_regis">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/viewGroup_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_tenLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/advent_pro_medium"
+                    android:inputType="phone"
+                    android:text="Họ và Tên"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edt_tenRegis"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint=" Tên"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#AA9F9F"
+                        android:inputType="text"
+                        android:drawableStart="@drawable/icon_person"
+                        android:background="@drawable/background_border_regis"
+                        tools:ignore="Autofill,HardcodedText" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/viewGroup_edtLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewGroup_Name"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_sdtLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/advent_pro_medium"
+                    android:inputType="phone"
+                    android:textColor="#FFFFFF"
+                    android:text="Số điện thoại"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edt_sdtRegis"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint=" (+84) xxx xxx xxx"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#7E7878"
+                        android:inputType="text"
+                        android:drawableStart="@drawable/icon_phone"
+                        android:background="@drawable/background_border_regis"
+                        tools:ignore="Autofill,HardcodedText" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/viewGroup_edtMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewGroup_edtLogin"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_matKhauLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/advent_pro_medium"
+                    android:text="Mật khẩu"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edt_matKhauRegis"
+                        android:hint="  Mật khẩu"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:textColorHint="#7E7878"
+                        android:inputType="text"
+                        android:textColor="@color/white"
+                        android:drawableStart="@drawable/icon_key"
+                        android:background="@drawable/background_border_regis"
+                        tools:ignore="Autofill,HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewGroup_nhaoLaiMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewGroup_edtMatKhau"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/advent_pro_medium"
+                    android:text="Nhập lại mật khẩu"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/edt_nhapLaiMatKhauRegis"
+                        android:hint="  Nhập lại mật khẩu"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:textColorHint="#7E7878"
+                        android:inputType="text"
+                        android:textColor="@color/white"
+                        android:drawableStart="@drawable/icon_key"
+                        android:background="@drawable/background_border_regis"
+                        tools:ignore="Autofill,HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="88dp"
+                android:layout_marginBottom="33dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnClick_regisToLogin"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:background="@drawable/backgroud_radius_white"
+                    android:src="@drawable/icon_back"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#A39292"/>
+
+                <Button
+                    android:id="@+id/btnClickRegis"
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/backgroud_radius_white"
+                    android:backgroundTint="#FFFFFF"
+                    android:fontFamily="@font/amiko"
+                    android:text="Tạo tài khoản"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

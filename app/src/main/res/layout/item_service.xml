@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_Service"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imgMoTaService"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            tools:srcCompat="@drawable/conghoa" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/viewGroup_littleDetailDichVu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/cardView_Service"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTenService"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:text="Tên"
+            android:textSize="17dp"/>
+
+        <LinearLayout
+            android:id="@+id/viewGroup_Gia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvGiaDichVu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="....."
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" đ"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvClick_toServicelLobby"
+        android:layout_width="155dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="243dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/backgroud_radius_bot_hong"
+        android:fontFamily="@font/amiko"
+        android:gravity="center"
+        android:text="Xem chi tiết" />
+    <!--<TextView
+        android:id="@+id/tvClick_toServicelLobby"
+        android:layout_width="159dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-97dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/viewGroup_littleDetailDichVu"
+        android:background="@drawable/backgroud_radius"
+        android:fontFamily="@font/amiko"
+        android:gravity="center"
+        android:text="Xem chi tiết" />-->
+</RelativeLayout>

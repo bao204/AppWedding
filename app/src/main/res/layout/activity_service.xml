@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <include layout="@layout/icon_back_toolbar"
+            android:id="@+id/iconBackClick_toolbar"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchDichvu"
+            android:layout_width="290dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/backgroud_radius_yellow"
+            android:focusable="false"
+            android:gravity="center"
+            app:closeIcon="@drawable/icon_close"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search service"
+            app:searchHintIcon="@null"
+            app:searchIcon="@drawable/search" />
+
+        <!--<include layout="@layout/toolbar_include"
+            android:id="@+id/toolbar_dichvu"
+            android:layout_margin="6dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"/>-->
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvService"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

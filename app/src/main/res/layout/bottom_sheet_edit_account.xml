@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/clickOk_updateAccountUser">
+
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/icon_check" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Cập nhật"
+            android:gravity="center"
+            android:textSize="30sp"/>
+
+        <LinearLayout
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/editAccountUser_clickClose">
+
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/icon_close"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Họ và tên"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#1E1F22"/>
+
+    <EditText
+        android:id="@+id/admin_editNameAccount"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="ten user"
+        android:paddingStart="7dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" * Không sửa số điện thoại"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#F81606"/>
+
+    <EditText
+        android:id="@+id/admin_editSoDT"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="so dien thoai"
+        android:paddingStart="7dp"
+        android:textSize="25sp"
+        android:editable="false"
+        tools:ignore="Deprecated"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* Không thể sửa mật khẩu"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#EC1404"/>
+
+    <EditText
+        android:id="@+id/admin_editPassAccount"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="mat khau"
+        android:paddingStart="7dp"
+        android:textSize="25sp"
+        android:editable="false"
+        tools:ignore="Deprecated"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#1E1F22"/>
+    <EditText
+        android:id="@+id/admin_editPayAccount"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="pay"
+        android:textSize="25sp"
+        android:paddingStart="7dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* Không thể sửa trạng thái account"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#ED1B0B"/>
+    <EditText
+        android:id="@+id/admin_editTrangThaiAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="trang thai"
+        android:paddingStart="7dp"
+        android:textSize="25sp"
+        android:editable="false"
+        tools:ignore="Deprecated"/>
+
+</LinearLayout>

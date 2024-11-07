@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CookActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <include layout="@layout/icon_back_toolbar"
+            android:id="@+id/iconBackActivityCook"/>
+
+        <include layout="@layout/toolbar_include"
+            android:id="@+id/toolbar_cook"
+            android:layout_margin="6dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        app:tabSelectedTextColor="#E1467A"
+        app:tabTextColor="#B3B2B2"
+        app:tabBackground="@color/white"
+        app:tabIndicatorColor="#757373"
+        android:layout_height="wrap_content"
+        android:contentDescription="tab"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="tab"/>
+
+
+</LinearLayout>

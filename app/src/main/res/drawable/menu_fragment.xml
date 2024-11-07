@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/navigation_trangChu"
+    android:icon="@drawable/store_blue_24dp"
+    android:title="@string/title_trangChu" />
+
+    <!--<item
+        android:id="@+id/navigation_deXuat"
+        android:icon="@drawable/ic_dexuat"
+        android:title="@string/title_deXuat"/>-->
+    <item
+        android:id="@+id/navigation_datTiec"
+        android:icon="@drawable/ic_dattiec"
+        android:title="@string/title_datTiec"/>
+
+     <item
+         android:id="@+id/navigation_setting"
+         android:icon="@drawable/setting_blue_24d"
+         android:title="@string/title_caiDat"/>
+</menu>

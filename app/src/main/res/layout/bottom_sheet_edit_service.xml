@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Cập nhật"
+            android:gravity="center"
+            android:textSize="30sp"/>
+
+        <ImageButton
+            android:id="@+id/edit_clickClose"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/icon_close"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/admin_editNameService"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="ten service"
+        android:paddingLeft="5dp"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/admin_editAnhService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="anh"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editMotaService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="mo ta"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editGiaService"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="gia"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <Button
+        android:id="@+id/admin_UpdateService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"/>
+
+
+</LinearLayout>

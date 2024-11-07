@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_margin="7dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="20sp"
+        android:id="@+id/notiQuantilySelectedService"/>
+
+
+    <LinearLayout
+        android:padding="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" * Nhấn hủy để tiếp tục chọn món hoặc nhấn OK để xác nhận chọn món và tiếp tục chọn sản phẩm khác."
+            android:textSize="16sp"
+            android:textColor="#2D48DC"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/clickOkQuantilyServiceSelected"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:text="OK"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:layout_marginStart="30dp"
+                android:id="@+id/clickCloseQuantilyServiceSelected"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:text="Hủy"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

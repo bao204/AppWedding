@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "926167108120",
+    "firebase_url": "https://project-dattiec-154-fd859-default-rtdb.firebaseio.com",
+    "project_id": "project-dattiec-154-fd859",
+    "storage_bucket": "project-dattiec-154-fd859.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926167108120:android:47a6ce2f6b4ac7591b916d",
+        "android_client_info": {
+          "package_name": "com.example.weddingpackage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-YAaT36pPvK_b6djlFNZtkJaJm4a0dtM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

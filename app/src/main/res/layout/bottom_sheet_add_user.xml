@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/addUser_clickAdd"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:text="Add"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Add User"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/addAccount_clickCloses"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Hủy"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/admin_addNameUser"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="Ho ten"
+        android:paddingLeft="5dp"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/admin_addSodt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="so dien thoai"
+        android:inputType="phone"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_addMatKhauUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="mat khau"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+
+    <EditText
+        android:id="@+id/admin_addPayAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="pay"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:inputType="phone"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/clickOk_updateCook">
+
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/icon_check" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Cập nhật"
+            android:gravity="center"
+            android:textSize="30sp"/>
+
+        <LinearLayout
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/editCook_clickClose">
+
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/icon_close"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/admin_editNameCook"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="ten cook"
+        android:paddingLeft="5dp"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/admin_editAnhCook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="anh"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* Lưu ý: Nhâp loại không dấu"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#E80A0A"/>
+    <EditText
+        android:id="@+id/admin_editLoaiCook"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="loai"
+        android:paddingLeft="5dp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* Lưu ý: Không nhập mục này"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#E80A0A"/>
+    <EditText
+        android:id="@+id/admin_editIdCook"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="id loai"
+        android:paddingLeft="5dp"
+        android:textSize="25sp"
+        android:editable="false"
+        tools:ignore="Deprecated" />
+
+    <EditText
+        android:id="@+id/admin_editMotaCook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="Mo ta"
+        android:paddingLeft="5dp"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/admin_editGiaCook"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="gia"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+</LinearLayout>

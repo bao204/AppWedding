@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.TrangChuFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_radius_top_leftright_vangxanh"
+                    android:gravity="center"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/tvName_sanhTrangChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/icon_more_trangchu"
+                        android:text="Sảnh"
+                        android:textSize="24sp"
+                        android:gravity="center"/>
+
+                    <Space
+                        android:layout_width="130dp"
+                        android:layout_height="0dp"/>
+
+                    <TextView
+                        android:id="@+id/tvClick_toAllLobby"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Xem tất cả"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_login"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/trangChu_sanh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_radius_top_leftright_vangxanh"
+                    android:gravity="center"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/tvName_monAnTrangChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/icon_more_trangchu"
+                        android:text="Món ăn"
+                        android:textSize="24sp"
+                        android:gravity="center"/>
+
+                    <Space
+                        android:layout_width="99dp"
+                        android:layout_height="0dp"/>
+
+                    <TextView
+                        android:id="@+id/tvClick_toAllMonAn"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Xem tất cả"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_login"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/trangchu_monAn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_radius_top_leftright_vangxanh"
+                    android:gravity="center"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/tvName_dichVuTrangChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/icon_more_trangchu"
+                        android:text="Dịch vụ"
+                        android:textSize="24sp"
+                        android:gravity="center"/>
+
+                    <Space
+                        android:layout_width="99dp"
+                        android:layout_height="0dp"/>
+
+                    <TextView
+                        android:id="@+id/tvClick_toAllDichVu"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Xem tất cả"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:background="@drawable/background_login"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/trangChu_dichVu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_border" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/groupQuanLy"
+        android:checkableBehavior="single">
+
+        <item
+            android:title="@string/dichVu"
+            android:id="@+id/dichVu"/>
+
+        <item
+            android:title="@string/monAn"
+            android:id="@+id/monAn"/>
+
+        <item
+            android:title="@string/sanh"
+            android:id="@+id/sanh"/>
+
+        <item
+            android:title="@string/goiTiecCuoi"
+            android:id="@+id/goiTiecCuoi"/>
+
+        <item
+            android:title="@string/datTiec"
+            android:id="@+id/datTiec"/>
+
+        <item
+            android:title="@string/hoaDon"
+            android:id="@+id/hoaDon"/>
+
+        <item
+            android:title="@string/AccountUser"
+            android:id="@+id/acountUser"/>
+    </group>
+
+    <item
+        android:title="@string/logOut"
+        android:id="@+id/logOut"/>
+</menu>

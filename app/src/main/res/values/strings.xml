@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">WeddingPackage</string>
+    <string name="detailLobby">
+        Sảnh Platin với kích thước 386 m2 được bày trí theo phong cách Châu Âu sang trọng sẽ thật sự phù hợp cho một hôn lễ ấm cúng với số lượng khách mời trong khoảng 20 đến 26 bàn tiệc. Diện tích sảnh có thể mở rộng linh hoạt với sức chứa lên đến 1500 khách (150 bàn) nhằm đáp ứng cho nhiều hình thức và nhu cầu đặt tiệc khác nhau.
+    </string>
+    <string name="title_trangChu">Trang Chủ</string>
+    <string name="title_datTiec">Đặt tiệc</string>
+    <string name="title_caiDat">Cài đặt</string>
+    <string name="title_deXuat">Đề xuất</string>
+    <string name="title_lichSuDatTiec">Lịch sử đặt tiệc</string>
+
+    <string name="datTiec">Đặt tiệc</string>
+    <string name="chiNhanh">Chi nhánh</string>
+    <string name="monAn">Món ăn</string>
+    <string name="goiTiecCuoi">Gói tiệc cưới</string>
+    <string name="sanh">Sảnh</string>
+    <string name="dichVu">Dịch vụ</string>
+    <string name="trangTriSanh">Trang trí sảnh</string>
+    <string name="logOut">Đăng xuất</string>
+    <string name="AccountUser">Tài khoản người dùng</string>
+    <string name="hoaDon">Hóa đơn</string>
+    <string name="openDrawer"></string>
+    <string name="closeDrawer">Drawer close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="home_fragment">HOME</string>
+    <string name="deXuat_fragment">ĐỀ XUẤT</string>
+    <string name="datTiec_fragment">ĐẶT TIỆC</string>
+    <string name="caiDat_fragment">CÀI ĐẶT</string>
+
+    <string name="client_id">926167108120-e3qpbv1ds110ac969tb7ql2vbqn9m39m.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

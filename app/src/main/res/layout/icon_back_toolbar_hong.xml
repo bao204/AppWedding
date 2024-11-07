@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:src="@drawable/icon_back"
+
+    android:contentDescription="back"
+    android:contextClickable="true"
+    android:onClick="iconBack_click">
+</ImageButton>

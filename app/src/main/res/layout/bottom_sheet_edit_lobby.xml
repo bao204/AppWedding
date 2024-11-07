@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/clickOk_updateLobby">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/icon_check" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Cập nhật"
+            android:gravity="center"
+            android:textSize="30sp"/>
+
+        <LinearLayout
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/imgB_clickClose">
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/icon_close"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/admin_editTenLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/backgroud_textview_white_radius"
+        android:hint="ten lobby"
+        android:paddingLeft="5dp"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/admin_editQuanLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="quan"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editDiaChiLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="dia chi"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editSoLuongBanLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="so luong ban"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editGiaBanLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="gia ban"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editKichThuocLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="kich thuoc"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editThongTinKhacLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="thong tin khac"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editAnhLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="anh"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+    <EditText
+        android:id="@+id/admin_editGiaLobby"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="gia"
+        android:textSize="25sp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/backgroud_textview_white_radius"/>
+
+
+</LinearLayout>
