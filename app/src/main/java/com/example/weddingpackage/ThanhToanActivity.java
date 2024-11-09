@@ -70,7 +70,7 @@ public class ThanhToanActivity extends AppCompatActivity {
     User user1;
 
 
-    Button btnMoMo;
+    Button btnMoMo, btnDeposit;
     ImageView qrcode;
 
     //////////////////////////
@@ -94,12 +94,13 @@ public class ThanhToanActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar_thanhtoan);
 
         qrcode = findViewById(R.id.qrcode);
+        btnDeposit = findViewById(R.id.depositButton);
 
         btnMoMo = findViewById(R.id.btnMoMo);
         btnMoMo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* requestPayment();*/
+                /* requestPayment();*/
                 Display display = getWindowManager().getDefaultDisplay();
                 Point size = new Point();
                 display.getSize(size);
@@ -219,13 +220,13 @@ public class ThanhToanActivity extends AppCompatActivity {
         });
 
         FirebaseDatabase.getInstance().getReference("dichvu")
-                        .addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                            }
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {}});
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {}});
         clickToDetailCook.setOnClickListener(v->{
             Intent intent1 = new Intent(ThanhToanActivity.this, ShowListCookThanhToanActivity.class);
             intent1.putExtra("listCook", listCook);
@@ -239,26 +240,26 @@ public class ThanhToanActivity extends AppCompatActivity {
         });
 
         FirebaseDatabase.getInstance().getReference("user")
-                        .addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                if(dataSnapshot.exists()){
-                                    for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                                        User user2 = dataSnapshot1.getValue(User.class);
-                                        user2.setKey(dataSnapshot1.getKey());
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                            for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
+                                User user2 = dataSnapshot1.getValue(User.class);
+                                user2.setKey(dataSnapshot1.getKey());
 
-                                        if(user2.getSodt().equals(user.getSodt())){
-                                            keyuser = user2.getKey();
-                                        }
-                                    }
+                                if(user2.getSodt().equals(user.getSodt())){
+                                    keyuser = user2.getKey();
                                 }
                             }
+                        }
+                    }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                            }
-                        });
+                    }
+                });
 
         clickPayThanhToan.setOnClickListener(v->{
             DialogPlus dialogPlus = DialogPlus.newDialog(ThanhToanActivity.this)
