@@ -349,34 +349,31 @@ public class ThanhToanActivity extends AppCompatActivity {
     private void requestPayment() {
         AppMoMoLib.getInstance().setAction(AppMoMoLib.ACTION.PAYMENT);
         AppMoMoLib.getInstance().setActionType(AppMoMoLib.ACTION_TYPE.GET_TOKEN);
-        /*if (tongTien.getText().toString() != null && tongTien.getText().toString().trim().length() != 0)
-            amount = tongTien.getText().toString().trim();*/
 
         Map<String, Object> eventValue = new HashMap<>();
-        //client Required
-        eventValue.put("merchantname", merchantName); //Tên đối tác. được đăng ký tại https://business.momo.vn. VD: Google, Apple, Tiki , CGV Cinemas
-        eventValue.put("merchantcode", merchantCode); //Mã đối tác, được cung cấp bởi MoMo tại https://business.momo.vn
-        eventValue.put("amount", amount); //Kiểu integer
-        eventValue.put("orderId", "orderId123456789"); //uniqueue id cho Bill order, giá trị duy nhất cho mỗi đơn hàng
-        eventValue.put("orderLabel", "Mã đơn hàng"); //gán nhãn
 
-        //client Optional - bill info
-        eventValue.put("merchantnamelabel", "Dịch vụ");//gán nhãn
-        eventValue.put("fee", "0"); //Kiểu integer
-        eventValue.put("description", description); //mô tả đơn hàng - short description
+        // Thông tin bắt buộc
+        eventValue.put("merchantname", merchantName);
+        eventValue.put("merchantcode", merchantCode);
+        eventValue.put("amount", amount); // Kiểu String
+        eventValue.put("orderId", "orderId123456789"); // Mã đơn hàng duy nhất
+        eventValue.put("orderLabel", "Thanh toán đặt tiệc"); // Nhãn đơn hàng
 
-        //client extra data
+        // Thông tin tùy chọn
+        eventValue.put("merchantnamelabel", merchantNameLabel);
+        eventValue.put("fee", "0"); // Phí (nếu có)
+        eventValue.put("description", description); // Mô tả đơn hàng
+
+        // Dữ liệu bổ sung
         eventValue.put("requestId",  merchantCode+"merchant_billId_"+System.currentTimeMillis());
         eventValue.put("partnerCode", merchantCode);
-        //Example extra data
+
+        // Dữ liệu JSON bổ sung (tùy chọn)
         JSONObject objExtraData = new JSONObject();
         try {
-            objExtraData.put("site_code", "008");
-            objExtraData.put("site_name", "CGV Cresent Mall");
-            objExtraData.put("screen_code", 0);
-            objExtraData.put("screen_name", "Special");
-            objExtraData.put("movie_name", "Kẻ Trộm Mặt Trăng 3");
-            objExtraData.put("movie_format", "2D");
+            objExtraData.put("site_code", "008"); // Mã địa điểm (tùy theo dịch vụ của bạn)
+            objExtraData.put("site_name", "Nhà hàng tiệc cưới X"); // Tên địa điểm
+            // ... các thông tin bổ sung khác
         } catch (JSONException e) {
             e.printStackTrace();
         }
