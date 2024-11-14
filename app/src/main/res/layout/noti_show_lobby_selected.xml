@@ -30,23 +30,23 @@
 
 
     <LinearLayout
-        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/clickOKChooseLobbySelected"
             android:layout_width="110dp"
             android:layout_height="match_parent"
-            android:text="OK"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="10dp"
+            android:text="OK" />
 
         <Button
             android:id="@+id/clickCloseChooseLobbySelected"
             android:layout_width="110dp"
             android:layout_height="match_parent"
-            android:text="Hủy"/>
+            android:text="Hủy" />
 
     </LinearLayout>
 

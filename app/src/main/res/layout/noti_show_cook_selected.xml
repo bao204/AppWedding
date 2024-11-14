@@ -2,54 +2,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="7dp"
     android:gravity="center"
-    android:layout_margin="7dp">
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/notiQuantilySelectedCook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="..."
-        android:textSize="20sp"
-        android:id="@+id/notiQuantilySelectedCook"/>
+        android:textSize="20sp" />
 
 
     <LinearLayout
-        android:padding="7dp"
-        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="156dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:padding="7dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text=" * Nhấn hủy để tiếp tục chọn món hoặc nhấn OK để xác nhận chọn món và tiếp tục chọn sản phẩm khác."
-            android:textSize="16sp"
             android:textColor="#2D48DC"
-            android:gravity="center"/>
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_marginTop="100px"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/clickOKChooseCookSelected"
                 android:layout_width="110dp"
                 android:layout_height="match_parent"
-                android:text="OK"
-                android:layout_marginEnd="10dp" />
+                android:layout_marginEnd="10dp"
+                android:text="OK" />
 
             <Button
-                android:layout_marginStart="30dp"
                 android:id="@+id/clickCloseChooseCookSelected"
                 android:layout_width="110dp"
                 android:layout_height="match_parent"
-                android:text="Hủy"/>
+                android:layout_marginStart="30dp"
+                android:text="Hủy" />
 
         </LinearLayout>
 
