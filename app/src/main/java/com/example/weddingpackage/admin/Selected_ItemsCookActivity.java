@@ -145,7 +145,7 @@ public class Selected_ItemsCookActivity extends AppCompatActivity {
             case R.id.Save:
                 DialogPlus dialogPlus = DialogPlus.newDialog(Selected_ItemsCookActivity.this)
                         .setContentHolder(new ViewHolder(R.layout.noti_show_cook_selected))
-                        .setExpanded(true, 390)
+                        .setExpanded(true, 600)
                         .setGravity(Gravity.CENTER)
                         .setCancelable(false)
                         .create();

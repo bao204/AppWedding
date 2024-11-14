@@ -102,13 +102,12 @@ public class selectedLobby_itemActivity extends AppCompatActivity implements Int
 
                 DialogPlus dialogPlus = DialogPlus.newDialog(selectedLobby_itemActivity.this)
                         .setContentHolder(new ViewHolder(R.layout.noti_show_lobby_selected))
-                        .setExpanded(true, 720)
+                        .setExpanded(true, 800)
                         .setGravity(Gravity.CENTER)
                         .setCancelable(false)
                         .create();
 
                 View view = dialogPlus.getHolderView();
-
                 ImageView anh = view.findViewById(R.id.imgLobbySelected);
                 TextView info = view.findViewById(R.id.notiQuantilySelectedLobby);
 
