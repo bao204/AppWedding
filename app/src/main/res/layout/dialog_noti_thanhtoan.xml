@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:padding="10dp">
 
 
     <LinearLayout
@@ -15,10 +15,11 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_marginRight="3dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:paddingTop="20dp"
             android:text="Số tiền cần thanh toán: "
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -30,13 +31,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="..."
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" VND"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -44,12 +45,10 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_marginRight="3dp"
         android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
         android:text="Số dư hiện tại trong Pay của bạn là: "
-        android:textSize="17sp"/>
-
-
+        android:textSize="17sp" />
 
 
     <LinearLayout
@@ -60,60 +59,60 @@
         <TextView
             android:id="@+id/soTienPayTrongAccount_notiThanhToanPay"
             android:layout_width="wrap_content"
-            android:layout_marginRight="3dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
             android:text="..."
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" VND"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_marginRight="3dp"
-                android:layout_height="wrap_content"
-                android:text=" *Sau khi bạn bấm thanh toán thì không thể sửa thông tin được nữa, 'vui lòng kiểm tra lại kĩ thông tin và các sản phẩm trớc khi xác nhận thanh toán'"
-                android:textSize="20sp"
-                android:textColor="#E32B2B"/>
-
-        </LinearLayout>
-
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:visibility="invisible"
-        android:layout_marginRight="3dp"
-        android:layout_height="wrap_content"
-        android:text=" *Số dư trong pay của bạn không đủ"
-        android:textColor="@color/Red"
-        android:textSize="20sp"
-        android:id="@+id/notisodukhonghople"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="3dp"
+            android:gravity="center"
+            android:text=" *Sau khi bạn bấm thanh toán thì không thể sửa thông tin được nữa, 'vui lòng kiểm tra lại kĩ thông tin và các sản phẩm trớc khi xác nhận thanh toán'"
+            android:textColor="#E32B2B"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/notisodukhonghople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="3dp"
+        android:text=" *Số dư trong pay của bạn không đủ"
+        android:textColor="@color/Red"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/clickPayThanhToan_notiDialogThanhToan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thanh toán"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/clickHuyThanhToan_notiDialogThanhToan"
@@ -121,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="HỦY"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
     </LinearLayout>
 

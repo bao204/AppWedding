@@ -1,5 +1,6 @@
 package com.example.weddingpackage;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Point;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -82,6 +84,8 @@ public class ThanhToanActivity extends AppCompatActivity {
     private String merchantCode = "123432112332";
     private String merchantNameLabel = "Nhà cung cấp";
     private String description = "Thanh toán dịch vụ ABC";
+
+    private boolean isDepositMade = false;
 
     //////////////////////////
 
@@ -314,9 +318,82 @@ public class ThanhToanActivity extends AppCompatActivity {
             clickHuyThanhToan_notiDialogThanhToan.setOnClickListener(vi->{
                 dialogPlus.dismiss();
             });
+            btnDeposit.setOnClickListener(vi->{
+
+            });
+        });
+        btnDeposit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Calculate deposit amount (e.g., 20% of total amount)
+                double depositAmount = tonggia * 0.2;
+
+                // Check if deposit has already been made (using a flag or status)
+                if (!isDepositMade) {
+                    // Handle deposit payment with the calculated amount
+                    handleDepositPayment(depositAmount);
+                    isDepositMade = true; // Update deposit status
+                } else {
+                    // Deposit already made, show a message or take appropriate action
+                    Toast.makeText(ThanhToanActivity.this, "Bạn đã đặt cọc rồi.", Toast.LENGTH_SHORT).show();
+                }
+            }
         });
 
     }
+    public interface DepositListener {
+        void onDepositSuccess();
+        void onDepositFailed(String message);
+    }
+    private void handleDepositPayment(double depositAmount) {
+        // Show a confirmation dialog (optional)
+        showConfirmDepositDialog(depositAmount, new DepositListener() {
+            @Override
+            public void onDepositSuccess() {
+                // Update deposit status and proceed with deposit payment
+                updateDepositStatus(true);
+                requestPayment(); // Call MoMo payment function
+            }
+
+            @Override
+            public void onDepositFailed(String message) {
+                // Notify user about deposit payment failure
+                Toast.makeText(ThanhToanActivity.this, "Thanh toán đặt cọc thất bại: " + message, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    private void updateDepositStatus(boolean isDepositSuccessful) {
+        // Update deposit status in your database based on the payment outcome
+        if (isDepositSuccessful) {
+            // Deposit successful, update to reflect payment
+            datTiec1.setTinhTrangThanhToan("coc (PAY)"); // Set payment status to "deposit (PAY)"
+            FirebaseDatabase.getInstance().getReference("dattiec").child(datTiec1.getMa()).setValue(datTiec1); // Update the dattiec object in Firebase
+        } else {
+            // Deposit failed, handle accordingly (optional)
+            Toast.makeText(this, "Thanh toán đặt cọc thất bại", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void showConfirmDepositDialog(double depositAmount, DepositListener listener) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Xác nhận đặt cọc");
+        builder.setMessage("Bạn có chắc chắn muốn đặt cọc " + depositAmount + " VND?");
+        builder.setPositiveButton("Đồng ý", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                listener.onDepositSuccess(); // Call the listener's success method
+            }
+        });
+        builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
     void ViewMapping(){
         ten = findViewById(R.id.tenThanhToan);
         sodt = findViewById(R.id.sodtThanhToan);
@@ -344,6 +421,19 @@ public class ThanhToanActivity extends AppCompatActivity {
     }
 
 
+    private void requestMoMoPayment(double depositAmount) {
+        // Set MoMo parameters as per MoMo SDK documentation
+        Map<String, Object> eventValue = new HashMap<>();
+        eventValue.put("merchantname", merchantName);
+        eventValue.put("merchantcode", merchantCode);
+        eventValue.put("amount",String.valueOf(depositAmount));
+        eventValue.put("orderId", "orderId123456789"); // Unique order ID
+        eventValue.put("orderLabel", "Thanh toán đặt tiệc - Đặt cọc");
+
+        // ... other MoMo parameters
+
+        AppMoMoLib.getInstance().requestMoMoCallBack(this, eventValue);
+    }
 
     //Get token through MoMo app
     private void requestPayment() {
